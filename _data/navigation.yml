@@ -1,0 +1,6 @@
+- text: Home
+  url: /
+- text: Pricing
+  url: /pricing
+- text: Sign Up
+  url: /pricing#signup

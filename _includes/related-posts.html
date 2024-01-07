@@ -1,0 +1,14 @@
+<div class="single-related bg-3 sec-spacer">
+  <div class="container">
+    <h4 class="inner-title">Posts You May Like</h4>
+    <div class="single-slider overflow-hidden">
+        {% for post in site.posts %}
+            {% if page.title != post.title %}
+            <div class="item">
+                {% include post-card.html %}
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<ul class="navbar-nav mr-auto navbar-menu">
+  {% for category in site.data.categories %}
+    <li class="nav-item"><a class="nav-link" href="/category/{{category.slug}}">{{category.name}}</a></li>
+  {% endfor %}
+</ul>

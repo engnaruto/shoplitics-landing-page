@@ -1,0 +1,54 @@
+---
+layout: default
+bg_image: /assets/images/blog-hero.png
+description: A the and given the harmonics confidence even good day.
+pagination:
+  enabled: true
+---
+<!-- ==================== BLOG START ========================= -->
+<div class="blog-area">
+  <div class="blog-header" style="background-image: url({{page.bg_image}});">
+    <div class="container">
+      <div class="blog-header-content">
+        <h1 class="title">{{page.title}}</h1>
+        <p class="text">{{page.description}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg  bg-white blog-navbar">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        {% include post-cat.html %}
+        {% include nav-search.html %}
+      </div>
+    </nav>
+  </div>
+  <div class="blog-post bg-spacer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="posts">
+            <div class="row infinite-scroll">
+              {% for post in paginator.posts %}
+              <div class="col-sm-6 col-md-12 col-lg-6 mb-30 post-item">
+                {% include post-card.html %}
+              </div>
+              {% endfor %}
+            </div>
+            
+            <div class="row text-center">
+              <nav class="post-pagination">
+                {% include pagination.html %}
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ==================== BLOG END ========================= -->

@@ -1,0 +1,18 @@
+<ul class="navbar-nav ml-auto">
+  {% for link in site.data.navigation %}
+  <li class="nav-item {% if link.submenu %}dropdown{% endif %}">
+    <a class="nav-link {% if link.submenu %}dropdown-toggle{% endif %}" href="{{ link.url|prepend:site.baseurl }}" {% if link.submenu %} data-toggle="dropdown" {% endif %}>
+      {{ link.text }}
+    </a>
+    {% if link.submenu %}
+    <ul class="dropdown-menu">
+      <div class="dropdown-corner"></div>
+      {% for sublink in link.submenu %}
+        <li><a href="{{ sublink.url|prepend:site.baseurl }}">{{ sublink.text }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+<!-- end expand menu   -->

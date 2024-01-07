@@ -1,0 +1,42 @@
+---
+layout: default
+title: Page Title
+description: A the and given the harmonics confidence even good day.
+bg_image: /assets/images/blog-hero.png
+permalink: /page-url
+---
+<!-- ==================== BLOG START ========================= -->
+<div class="blog-area">
+  <div class="blog-header" style="background-image: url({{page.bg_image}});">
+    <div class="container">
+      <div class="blog-header-content">
+        <h1 class="title">{{page.title}}</h1>
+        <p class="text">{{page.description}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg  bg-white blog-navbar">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        {% include post-cat.html %}
+        {% include nav-search.html %}
+      </div>
+    </nav>
+  </div>
+  <div class="blog-post bg-spacer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-content">
+            {{page.content}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ==================== BLOG END ========================= -->

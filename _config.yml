@@ -1,0 +1,105 @@
+# Site settings
+title: "Shoplitics"
+email: "shoplitics@gmail.com"
+url: "https://shoplitics.com"
+baseurl: ""
+description: "Shoplitics"
+logo_url: /assets/images/logo.png
+footer_logo_url: /assets/images/logo.png
+google_analytics_key: "G-YKFEC7B2XD"
+google_maps_javascript_api_key:
+disqus_shortname:
+keywords: "amazon, amazon fba, amazon seller, amazon seller tools, amazon seller software, amazon seller app, amazon seller central, amazon seller account, amazon seller fees, amazon seller support, amazon seller forum, amazon seller login, amazon seller central login, amazon seller central uk, amazon seller central canada, amazon seller central india, amazon seller central australia, amazon seller central europe, amazon seller central japan, amazon seller central mexico, amazon seller central usa, amazon seller central app, amazon seller central fees, amazon seller central forum, amazon seller central canada login, amazon seller central canada fees, amazon seller central canada login page, amazon seller central canada contact, amazon seller central canada phone number, amazon seller central canada support, amazon seller central canada login page uk, amazon seller central canada login page usa, amazon seller central canada login page india, amazon seller central canada login page australia, amazon seller central canada login page europe, amazon seller central canada login page japan, amazon seller central canada login page mexico, amazon seller central canada login page usa, amazon seller central canada login page app, amazon seller central canada login page fees, amazon seller central canada login page forum, amazon seller central canada login page contact, amazon seller central canada login page phone number, amazon seller central canada login page support, amazon seller central canada login page uk, amazon seller central canada login page usa, amazon seller central canada login page india, amazon seller central canada login page australia, amazon seller central canada login page europe, amazon seller central canada login page japan, amazon seller central canada login page mexico, amazon seller central canada login page app, amazon seller central canada login page fees, amazon seller central canada login page forum, amazon seller central canada login page contact, amazon seller central canada login page phone number, amazon seller central canada login page support, amazon seller central canada login page uk, amazon seller central canada login page usa, amazon seller central canada login page india, amazon seller central canada login page australia, amazon seller central canada login page europe, amazon seller central canada login page japan, amazon seller central canada login page mexico, amazon seller central canada login page app, amazon seller central canada login page fees, amazon seller central canada login page forum, amazon seller central canada login page contact, amazon seller central canada login page phone number, amazon seller central canada login page support, amazon seller central canada login page uk, amazon seller central canada login page usa, amazon seller central canada login page india, amazon seller central canada login page australia, amazon seller central canada login page europe, amazon"
+#dribble_url: https://dribble.com/themeix
+#facebook_url: https://facebook.com/themeix
+#instagram_url: https://instagram.com/themeix
+#youtube_url: https://youtube.com/themeix
+#twitter_url: https://twitter.com/bondt_io
+#linkedin_url: https://linkedin.com/themeix
+#pinterest_url: https://pinterest.com/themeix
+
+#twitter:
+#  username: bondt_io
+#  card: summary_large_image
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+permalink: '/blog/:title/' # Pages are simple html files
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      twitter_image: "/assets/images/feature-image.png"
+      image:
+        path: "/assets/images/feature-image.png"
+        alt: "Shoplitics Logo"
+
+# Site configuration for the Jekyll 2 Pagination Gem
+pagination:
+  enabled: true
+  debug: true
+  collection: 'posts'
+  per_page: 15
+  permalink: '/pages/:num/' # Pages are simple html files 
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  category: 'posts'
+  tag: ''
+  locale: ''
+  trail:
+    before: 2
+    after:
+  extension: 'html'
+  indexpage: 'index'
+
+autopages:
+  enabled: true
+  categories:
+    layouts:
+      - 'category.html'
+    title: 'Category -  :cat'
+    permalink: '/category/:cat'
+  collections:
+    layouts:
+      - 'category.html'
+    title: ' :coll' # :coll is replaced by the collection name
+    permalink: '/:coll/'
+
+  tags:
+    layouts:
+      - 'tag.html'
+    title: 'Tag - :tag' # :tag is replaced by the tag name
+    permalink: '/tag/:tag'
+
+tag_page_layout: category
+tag_page_dir: tag
+tag_permalink_style: pretty
+
+jekyll-archives:
+  enabled:
+    - categories
+  layout: category
+  permalinks:
+    category: '/category/:name/'
+
+feed:
+  collections:
+    posts:
+      path: "/index.xml"

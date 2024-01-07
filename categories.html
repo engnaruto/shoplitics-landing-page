@@ -1,0 +1,51 @@
+---
+layout: default
+title: All Categories
+description: A the and given the harmonics confidence even good day.
+bg_image: /assets/images/blog-hero.png
+permalink: /categories
+sitemap: false
+---
+<div class="blog-header" style="background-image: url({{page.bg_image}});">
+  <div class="container">
+    <div class="blog-header-content">
+      <h1 class="title">{{page.title}}</h1>
+      <p class="text">{{page.description}}</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <nav class="navbar navbar-expand-lg  bg-white blog-navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      {% include post-cat.html %}
+      {% include nav-search.html %}
+    </div>
+  </nav>
+</div>
+<div class="all-categories-area  sec-spacer">
+  <div class="container">
+    <div class="row">
+      {% for category in site.data.categories %}
+        <div class="col-md-4 mb-4">
+          <div class="category-block-wrapper border">
+            <div class="category-block-top">
+              <img class="image mb-4" src="{{category.image}}" alt="image" />
+              <a href="/category/{{category.slug}}" target="_blank">
+                <h3 class="title">{{category.name}}</h3>
+              </a>
+              <p class="text">{{category.description}}</p>
+            </div>
+            <div class="category-block-bottom">
+              <a href="/category/{{category.slug}}" target="_blank" class="btn btn-primary btn-lg">View All Posts</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- ==================== BLOG END ========================= -->

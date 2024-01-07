@@ -1,0 +1,21 @@
+---
+layout: default
+title: Testimonial
+description: A the and given the harmonics confidence even good day.
+permalink: /testimonials
+sitemap: false
+---
+
+{% include page-title.html %}
+<div class="page-content-area">
+  <div class="themeix-page-content">
+    <div class="container">
+      <div class="row">
+        {% for testimonial in site.data.testimonials %}
+        {% include testimonial-card.html %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<!--{% include call-to-action.html %}-->

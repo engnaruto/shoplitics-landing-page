@@ -1,0 +1,72 @@
+<div class="sidebar">
+  <article class="sidebar-widget">
+    <header class="header">
+      <h4 class="title">Featured Posts</h4>
+    </header>
+    <div class="wrapper">
+      {% for post in site.posts %}
+      {% if post.featured == true %}
+      <div class="feature-item">
+        <div class="image">
+          <img class="img-fluid" src="{{post.post_image}}" alt="{{post.title}}" />
+        </div>
+        <div class="content">
+          <h4 class="title"><a href="{{post.url}}">{{post.title}}</a></h4>
+          {% for category in post.categories %}
+            <span class="badge"><a href="/category/{{ category }}">{{category}}</a></span>
+          {% endfor %}
+          
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </article>
+  <article class="sidebar-widget">
+    <header class="header">
+      <h4 class="title">Categories</h4>
+    </header>
+    <div class="wrapper">
+      <div class="category-item">
+        {% assign categories_list = site.categories %}
+        {% if categories_list.first[0] == null %}
+        {% for category in categories_cgflist %}
+
+        <div class="category-wrap"> <a href="/category/{{category | slugify}}"
+            class="category-btn">{{ category | camelcase }}</a></div>
+        {% endfor %}
+        {% else %}
+        {% for category in categories_list %}
+        <div class="category-wrap"> <a href="/category/{{category[0] | slugify}}"
+            class="category-btn">{{ category[0] | camelcase }}</a></div>
+        {% endfor %}
+        {% endif %}
+        {% assign categories_list = nil %}
+
+      </div>
+    </div>
+  </article>
+<!--  <article class="sidebar-widget">-->
+<!--    <header class="header">-->
+<!--      <h4 class="title">Tags</h4>-->
+<!--    </header>-->
+<!--    <div class="wrapper">-->
+<!--      <div class="tag-item">-->
+<!--        {% for tag in site.tags %}-->
+<!--        <div class="tag-wrap"> <a href="/tag/{{tag[0]}}" class="tag-btn">{{tag[0]}}</a></div>-->
+<!--        {% endfor %}-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </article>-->
+  <article class="sidebar-widget">
+    <header class="header">
+      <h4 class="title">Follow Us</h4>
+    </header>
+    <div class="wrapper">
+      <div class="social-item">
+        <a href="{{@site.twitter_url}}" target="_blank" class="social-link"><img src="{{'/assets/images/social-tw.svg' | relative_url }}" alt="logo"
+            class="social-icon"></a>
+      </div>
+    </div>
+  </article>
+</div>

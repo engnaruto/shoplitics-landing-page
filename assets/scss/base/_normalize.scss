@@ -1,0 +1,231 @@
+/** * ===========* 
+
+    1. Normalize CSS
+
+ * ============= * **/
+
+html {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+body {
+	background: $white;
+    font-family: 'Source Sans Pro', sans-serif;
+	color: $secondary;
+    font-size: 18px;
+    line-height: 1.6;
+	font-weight: $normal;
+    text-align: left;
+}
+
+ul,
+ol {
+	padding: 0;
+	padding-left: 20px;
+}
+
+ul ul p,
+ul ol p,
+ol ul p,
+ol ol p {
+	margin: 0;
+}
+.btn,
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus {
+	outline: 0px !important;
+}
+
+ 
+
+dl dd {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.form-control {
+	height: auto;
+}
+
+a {
+    color:$primary;
+	-webkit-transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+	-ms-transform: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+	-o-transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+button:hover,
+button:active,
+button:focus,
+a.btn:active,
+a.btn:focus,
+a.btn:hover {
+	-webkit-box-shadow: none ;
+	box-shadow: none;
+	outline: none;
+}
+
+.input-group .form-control:active,
+.input-group .form-control:focus,
+.input-group .form-control:hover {
+	z-index: 2;
+}
+
+.input-group-btn:not(:first-child)>.btn-group:active,
+.input-group-btn:not(:first-child)>.btn-group:focus,
+.input-group-btn:not(:first-child)>.btn-group:hover,
+.input-group-btn:not(:first-child)>.btn:active,
+.input-group-btn:not(:first-child)>.btn:focus,
+.input-group-btn:not(:first-child)>.btn:hover {
+	z-index: 1;
+}
+
+.form-control:focus {
+	box-shadow: none;
+	outline: none;
+}
+
+select.form-control:not([size]):not([multiple]) {
+	height: auto;
+}
+
+figure {
+	padding-left: 15px;
+}
+
+figure figcaption {
+	margin-top: 10px;
+}
+
+iframe {
+	border: 0;
+	width: 100%;
+}
+
+::-webkit-input-placeholder {
+	color:$gray-300;
+}
+
+:-moz-placeholder {
+	color: $gray-300;
+}
+
+::-o-placeholder {
+	color: $gray-300;
+}
+
+:-ms-input-placeholder {
+	color: $gray-300;
+}
+
+h1,.h1 {
+    font-size: 38px;
+    line-height: 44px
+}
+
+h2,.h2 {
+    font-size: 32px;
+    line-height: 36px
+}
+
+h3,.h3 {
+    font-size: 24px;
+    line-height: 30px
+}
+
+h4,.h4 {
+    font-size: 18px;
+    line-height: 24px
+}
+
+h5,.h5 {
+    font-size: 14px;
+    line-height: 20px
+}
+
+h6, .h6 {
+    font-size: 12px;
+    line-height: 18px
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: $bold;
+	color: $secondary;
+}
+.container{
+	max-width: 1270px;
+}
+.container-fluid{
+	max-width: 1365px;
+}
+.lilac {
+    background-color: lighten( $primary, 46% );
+}
+.light-gray {
+    background-color: $gray-300;
+}
+.light-red {
+    background-image:$gray-400;
+}
+.strong-bg{
+    background-color: $primary;
+}
+.bg-spacer{
+	padding:$spSmall 0;
+}
+.bg-11 {
+	background-color: lighten( $primary, 46% );
+}
+
+.bg-1 {
+	background-color: $primary;
+}
+
+.bg-2 {
+	background-color: $secondary;
+}
+
+.sec-spacer{
+	padding-top:$spSmall;
+	padding-bottom:$spSmall;
+
+	@include mobile {
+		padding-top:60px;
+	padding-bottom:60px;	
+	}
+}
+.w-75 {
+	@include mobile {
+	width: 100%!important;
+	}
+	@include tablet {
+	width: 100%!important;
+	}
+	@include laptop {
+	width: 100%!important;
+	}
+}
+.inner-spacer{
+	padding-top:$sp;
+	padding-bottom:$sp;
+}
+.page-spacer{
+	padding-top:$spLarge;
+}
+.mb-30 {
+	margin-bottom: 30px;
+}
+.bg-3 {
+	background-color: $gray-100;
+}
